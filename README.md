@@ -132,32 +132,33 @@ La génération de rapports est réalisée avec la bibliothèque ReportLab. :con
 
 ---
 
-# Structure du projet
+## Structure du projet
 
+```
 ECG-AI-Analyzer
 │
 ├── Analysis
-│ ├── preprocessing.py
-│ ├── detection.py
-│ ├── hrv.py
-│ └── Spectrogram.py
+│   ├── preprocessing.py
+│   ├── detection.py
+│   ├── hrv.py
+│   └── Spectrogram.py
 │
 ├── utils
-│ ├── plot.py
-│ └── export.py
+│   ├── plot.py
+│   └── export.py
 │
 ├── ML
-│ └── exploration_fixed.ipynb
-  └── best_model_targeted.pth
+│   ├── exploration_fixed.ipynb
+│   └── best_model_targeted.pth
 │
 ├── Styles
-│ └── style.css
+│   └── style.css
 │
 ├── app.py
 ├── model.py
 ├── requirements.txt
-├── resultats_hrv.xlsx
-
+└── resultats_hrv.xlsx
+```
 
 ---
 
