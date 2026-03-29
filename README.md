@@ -30,7 +30,7 @@ Les fonctionnalités incluent :
   - bradycardie
   - tachycardie
 
-La détection repose sur les méthodes proposées par la bibliothèque NeuroKit2. :contentReference[oaicite:0]{index=0}
+La détection repose sur les méthodes proposées par la bibliothèque NeuroKit2. 
 
 ---
 
@@ -60,7 +60,7 @@ Le système calcule différents indicateurs de HRV dans plusieurs domaines :
 - entropie approximative  
 - entropie d’échantillon  
 
-Ces métriques sont calculées et structurées automatiquement afin de faciliter leur interprétation. :contentReference[oaicite:1]{index=1}
+Ces métriques sont calculées et structurées automatiquement afin de faciliter leur interprétation. 
 
 ---
 
@@ -74,7 +74,7 @@ Cette représentation permet notamment d’identifier :
 - les composantes respiratoires  
 - le bruit haute fréquence  
 
-Le spectrogramme est obtenu à partir d’une transformation de Fourier à court terme. :contentReference[oaicite:2]{index=2}
+Le spectrogramme est obtenu à partir d’une transformation de Fourier à court terme.
 
 ---
 
@@ -88,7 +88,7 @@ L’architecture du modèle combine :
 - une couche **BiLSTM** pour capturer la dynamique temporelle du signal
 - des couches fully connected pour la classification finale
 
-Le modèle est défini dans le fichier `model.py`. :contentReference[oaicite:3]{index=3}
+Le modèle est défini dans le fichier `model.py`. 
 
 Le système peut prédire plusieurs catégories de diagnostics cardiaques, notamment :
 
@@ -113,7 +113,7 @@ Les fonctionnalités de l’interface incluent :
 - prédiction par IA  
 - consultation des informations patient  
 
-La logique principale de l’application est implémentée dans `app.py`. :contentReference[oaicite:4]{index=4}
+La logique principale de l’application est implémentée dans `app.py`. 
 
 ---
 
@@ -128,7 +128,7 @@ L’application permet d’exporter automatiquement les résultats de l’analys
   - indicateurs HRV  
   - résultats de la prédiction IA  
 
-La génération de rapports est réalisée avec la bibliothèque ReportLab. :contentReference[oaicite:5]{index=5}
+La génération de rapports est réalisée avec la bibliothèque ReportLab.
 
 ---
 
