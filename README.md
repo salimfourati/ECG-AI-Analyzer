@@ -1,6 +1,6 @@
 # Analyseur intelligent de signaux ECG
 
-Ce projet propose un système d’analyse automatisée de signaux électrocardiographiques (ECG) combinant traitement du signal, extraction d’indicateurs physiologiques et intelligence artificielle.
+Ce projet propose un système d’analyse automatisée de signaux électrocardiographiques (ECG), les signaux mesurant l’activité électrique du cœur, combinant traitement du signal, extraction d’indicateurs physiologiques et intelligence artificielle.
 
 L’application permet de visualiser des enregistrements ECG, d’analyser la variabilité de la fréquence cardiaque (HRV), d’explorer le contenu fréquentiel du signal et d’obtenir une prédiction diagnostique basée sur un modèle d’apprentissage profond.
 
@@ -27,8 +27,8 @@ Les fonctionnalités incluent :
 - détection automatique des R-peaks
 - calcul de la fréquence cardiaque moyenne
 - identification simple d’anomalies de rythme telles que :
-  - bradycardie
-  - tachycardie
+  - bradycardie (fréquence cardiaque basse)
+  - tachycardie (fréquence cardiaque élevée)
 
 La détection repose sur les méthodes proposées par la bibliothèque NeuroKit2. 
 
@@ -36,29 +36,28 @@ La détection repose sur les méthodes proposées par la bibliothèque NeuroKit2
 
 ## Analyse de la variabilité de la fréquence cardiaque (HRV)
 
-Le système calcule différents indicateurs de HRV dans plusieurs domaines :
+Le système calcule différents indicateurs de HRV, basée sur les intervalles RR (temps entre deux pics R successifs), dans plusieurs domaines :
 
 ### Domaine temporel
 
-- SDNN  
-- RMSSD  
-- pNN50  
-- TINN  
+- **SDNN (Standard Deviation of NN intervals)** : mesure la variabilité globale du rythme cardiaque  
+- **RMSSD (Root Mean Square of Successive Differences)**  : reflète les variations à court terme, liées au système parasympathique  
+- **pNN50 (percentage of successive NN intervals differing by more than 50 ms)** : pourcentage d’intervalles RR très variables  
+- **TINN (Triangular Interpolation of NN intervals histogram)**  : indicateur de la distribution des intervalles RR  
 
 ### Domaine fréquentiel
 
-- ULF  
-- VLF  
-- LF  
-- HF  
-- ratio LF/HF  
-
+- **ULF (Ultra Low Frequency)**  
+- **VLF (Very Low Frequency)**  
+- **LF (Low Frequency)**  
+- **HF (High Frequency)**  
+- **LF/HF (ratio Low Frequency / High Frequency)**
+- 
 ### Domaine non-linéaire
 
-- SD1  
-- SD2  
-- entropie approximative  
-- entropie d’échantillon  
+- **SD1**  
+- **SD2**  
+- **Entropy (mesure de la complexité du signal)**  
 
 Ces métriques sont calculées et structurées automatiquement afin de faciliter leur interprétation. 
 
@@ -84,9 +83,9 @@ Le système intègre un modèle de deep learning destiné à la classification d
 
 L’architecture du modèle combine :
 
-- des couches convolutionnelles (CNN) pour l’extraction de caractéristiques
-- une couche **BiLSTM** pour capturer la dynamique temporelle du signal
-- des couches fully connected pour la classification finale
+- des couches convolutionnelles **CNN (Convolutional Neural Network)** pour extraire automatiquement des caractéristiques du signal  
+- une couche **BiLSTM (Bidirectional Long Short-Term Memory)** pour modéliser les dépendances temporelles  
+- des couches fully connected pour la classification finale  
 
 Le modèle est défini dans le fichier `model.py`. 
 
