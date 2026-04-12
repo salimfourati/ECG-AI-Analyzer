@@ -1,0 +1,79 @@
+/* ===== Global App Background ===== */ 
+body {
+    background: linear-gradient(135deg, #E6F0FA, #D6E2E8);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== Sidebar ===== */
+[data-testid="stSidebar"] {
+    background-color: #1E2746; /* Bleu foncé */
+    color: #FFFFFF;
+}
+
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3,
+[data-testid="stSidebar"] label,
+[data-testid="stSidebar"] span {
+    color: #FFFFFF !important;
+    font-weight: 500;
+}
+
+[data-testid="stSidebar"] .stSelectbox div[data-baseweb="select"] {
+    background-color: #FFFFFF;
+    color: #1E2746;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+/* ===== Titres principaux ===== */
+h1, h2, h3 {
+    color: #F5F5F5 !important; /* Blanc cassé */
+    font-weight: 700;
+}
+
+/* ===== Textes généraux ===== */
+p, span, label, li {
+    color: #FFFFFF !important;  /* Texte blanc pour lisibilité */
+}
+
+/* ===== Boutons ===== */
+.stButton button {
+    background-color: #1E2746;  /* Bleu foncé */
+    color: #FFFFFF;
+    border-radius: 8px;
+    border: none;
+    padding: 0.6em 1.2em;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.stButton button:hover {
+    background-color: #FF8C42; /* Orange accent */
+    color: #FFFFFF !important;
+    transform: translateY(-2px);
+}
+
+/* ===== Onglets ===== */
+.stTabs [role="tablist"] {
+    border-bottom: 2px solid #F5F6FA;
+}
+
+.stTabs [role="tab"] {
+    color: #F5F5F5;  /* Blanc cassé par défaut */
+    font-weight: 600;
+    padding: 10px 20px;
+}
+
+.stTabs [role="tab"][aria-selected="true"] {
+    border-bottom: 3px solid #FF8C42 !important; /* Orange actif */
+    color: #FF8C42 !important;
+}
+
+/* ===== Boîtes d'information ===== */
+.stAlert {
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #1E2746 !important; /* Fond bleu foncé */
+    color: #FFFFFF !important;            /* Texte blanc */
+}

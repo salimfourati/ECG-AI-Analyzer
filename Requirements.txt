@@ -1,0 +1,35 @@
+# ==========================
+# Requirements for ECG App
+# ==========================
+
+# --- Web UI ---
+streamlit==1.37.0      # Interface web pour l’application
+plotly==5.22.0         # Graphiques interactifs (distribution des probabilités, visualisation)
+
+# --- Visualisation & Manipulation ---
+matplotlib==3.7.2      # Graphiques classiques (HRV, spectrogrammes)
+pandas==2.0.3          # Gestion des DataFrames (résultats HRV, tables)
+numpy==1.24.4          # Calculs numériques (évite les erreurs avec NumPy 2.0)
+
+# --- Machine Learning ---
+torch==2.0.1           # PyTorch (modèle CNN+BiLSTM)
+torchvision==0.15.2    # Librairie associée (transformations, compatibilité PyTorch)
+scikit-learn==1.3.0    # Train/test split, métriques (F1, précision, rappel)
+scipy==1.11.1          # Traitement du signal (filtres passe-bande, notch)
+
+# --- Analyse ECG ---
+neurokit2==0.2.7       # HRV, détection R-peaks
+wfdb==4.1.2            # Lecture fichiers PhysioNet/PTB (.hea, .dat)
+
+# --- Export & Rapports ---
+reportlab==3.6.12      # Génération PDF avancée (rapports ECG)
+openpyxl==3.1.2        # Export des résultats en Excel
+
+# ==========================
+# Notes :
+# - Testé avec Python 3.10 
+# - Stable et compatible (NumPy < 2.0 pour éviter bug np.unicode_)
+#
+# - Pour recréer l’environnement :
+#     pip install -r requirements.txt
+# ==========================
