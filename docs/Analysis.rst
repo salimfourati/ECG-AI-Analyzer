@@ -1,6 +1,15 @@
 Analysis package
 ================
 
+Ce package regroupe les modules principaux de traitement du signal ECG.
+
+Il implémente les étapes clés du pipeline :
+
+- prétraitement du signal
+- détection des R-peaks
+- calcul des métriques HRV
+- analyse spectrale
+
 Submodules
 ----------
 

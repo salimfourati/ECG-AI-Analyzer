@@ -7,11 +7,22 @@ Welcome to ECG-Anlayzer's documentation!
 ========================================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :maxdepth: 3
+   :caption: Vue d'ensemble:
 
    introduction
    pipeline
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Données :
+
+   Dataset
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Documentation technique :
+   
    modules
 
 

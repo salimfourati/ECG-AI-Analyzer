@@ -1,8 +1,17 @@
 utils package
 =============
 
-Submodules
-----------
+Ce package regroupe les fonctions auxiliaires utilisées dans l’application.
+
+Fonctionnalités
+---------------
+
+- visualisation des signaux ECG
+- génération de graphiques
+- export des résultats (Excel, PDF)
+
+Ces modules facilitent l’intégration des résultats dans l’interface utilisateur.
+
 
 utils.export module
 -------------------
